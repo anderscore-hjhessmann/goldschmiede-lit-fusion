@@ -1,0 +1,33 @@
+:imagesdir: images
+:speaker: {revealjs_speaker}
+:title: {revealjs_title}
+
+[state=no-title-footer]
+== {title}
+
+[.text-center]
+--
+// FIXME Untertitel ändern
+**Titel erweitert**
+
+// FIXME Titelbild hinzufügen
+image::Bildname.png[height=300, pdfwidth=40%]
+
+// FIXME Welche Veranstaltung, wo wird sie gehalten?
+Welche Veranstaltung wo?
+
+{date}, {author}
+--
+
+include::{basedir}/generated-src/speaker.adoc[]
+include::{basedir}/generated-src/anderScore1Slide.adoc[]
+
+[.text-center]
+== Wer seid ihr?
+
+image::anybody.jpg[height=300, pdfwidth=40%]
+
+* Wie heißt du?
+* Was machst du beruflich?
+* Welche Erfahrungen hast du dem Thema?
+* Was möchtest du in diesem Workshop lernen?

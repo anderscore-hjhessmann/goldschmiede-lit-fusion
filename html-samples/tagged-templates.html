@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Tagged Templates</title>
+</head>
+<body>
+    <h1>Tagged Templates</h1>
+
+    siehe auch <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">MDN: Template literals (Template strings)</a>
+
+    <h2>Simple Template</h2>
+    <div>1 + 1 = <span id="result1">3</span></div>
+    <script>
+        const result1 = `${ 1 + 1 }`;
+        document.getElementById('result1').textContent = result1;
+    </script>
+
+    <h2>Tagged Template</h2>
+    <div id="blub"></div>
+    <script>
+        function blub(strings, ...args) {
+            let result = '<h3>strings</h3><ol>';
+            for (s of strings) {
+                result += '<li>' + s + '</li>';
+            }
+            result += '</ol><h3>args</h3><ol>'
+            for (arg of args) {
+                result += '<li>' + arg + '</li>';
+            }
+            result += '</ol>'
+            return result;
+        }
+
+        document.getElementById('blub').innerHTML = blub`
+            Goldschmiede ${new Date()}
+            Lit ${42}
+            Fusion
+        `;
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+:title: {revealjs_title}
+:description: description
+:backend: revealjs
+:author: {revealjs_speaker}
+:revealjs_theme: default
+:linkattrs:
+:idprefix:
+:imagesdir: images
+:date: {revealjs_date}
+
+include::goldschmiede-lit-fusion.adoc[]
+
+include::oneMoreChapter.adoc[]
+
+
+
+// Samlpes
+
+include::samples-anderscore.adoc[]
+
+include::samples-revealjs.adoc[]

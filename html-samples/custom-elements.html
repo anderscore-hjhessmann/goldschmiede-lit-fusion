@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Elements</title>
+</head>
+<body>
+    <h1>Custom Elements</h1>
+    <my-hello>Goldschmiede</my-hello>
+
+    <script>
+        class MyHelloElement extends HTMLElement {
+            constructor() {
+                super();
+
+                this.attachShadow({mode: 'open'});
+
+                const wrapper = document.createElement('span');
+                wrapper.setAttribute("class", "hello")
+                wrapper.textContent = `Hallo ${this.textContent}!`;
+
+                const style = document.createElement("style");
+                style.textContent = '.hello { background-color: gold; }';
+
+                this.shadowRoot.append(style, wrapper);
+            }
+        }
+
+        customElements.define("my-hello", MyHelloElement)
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+:title: {revealjs_title}
+:description: description
+:backend: revealjs
+:author: {revealjs_speaker}
+:imagesdir: images
+
+[state=no-title-footer]
+== Tolles neues Kapitel
+
+[.center]
+Beschreibung
+
+[.center]
+Weitere Beschreibung?
+
+== 1. Unterkapitel
+
+[.heading]
+Themen
+
+* Thema 1
+* Thema 2
+
