@@ -41,6 +41,9 @@
   "author": "Google LLC",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@polymer/paper-button": "^3.0.1",
+    "@vaadin/vaadin-date-picker": "^22.0.2",
+    "date-fns": "^2.28.0",
     "lit": "^2.0.0"
   },
   "devDependencies": {

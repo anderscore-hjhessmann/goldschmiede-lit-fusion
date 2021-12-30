@@ -9,3 +9,35 @@
 
 * https://lit.dev/ => Tutorial
 
+== Starter-Projekt
+
+* https://lit.dev/ => Get Started => Starter Kits
+* https://github.com/lit/lit-element-starter-ts
+
+Bauen mit:
+
+    npm i
+    npm run build
+
+Ausführen mit (beide gleichzeitig)
+
+    npm run serve
+    npm run build:watch
+
+== Web-Component verwenden
+
+* https://www.webcomponents.org/introduction
+
+    npm install --save @polymer/paper-button
+
+== Fusion Komponente verwenden
+
+* https://vaadin.com/docs/latest/ds/components/date-picker
+
+Vaadin data-picker installieren:
+
+    npm i @vaadin/vaadin-date-picker --save
+
+Formatierung von Datumswerten:
+
+    npm install date-fns --save
