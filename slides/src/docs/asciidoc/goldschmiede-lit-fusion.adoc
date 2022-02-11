@@ -41,3 +41,13 @@ Vaadin data-picker installieren:
 Formatierung von Datumswerten:
 
     npm install date-fns --save
+
+== Hilla
+
+* Übersicht: https://vaadin.com/docs/latest/fusion/tutorials/in-depth-course/#what-is-vaadin-fusion
+* Vergleich: https://vaadin.com/comparison?compare=fusion_vs_vue
+* Start: https://start.vaadin.com/app
+
+== Hilla Referenzen
+
+* CSS-Klassen: https://vaadin.com/docs/latest/ds/foundation/utility-classes
