@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Element</title>
+    <style>
+        body, div {
+            background-color: green;
+        }
+        div {
+            padding: 3ex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Element mit Slot</h1>
+    <my-hello name="Goldschmiede">
+        <div slot="myslot">slot content</div>
+    </my-hello>
+
+    <script>
+        class MyHelloElement extends HTMLElement {
+            constructor() {
+                super();
+
+                this.attachShadow({mode: 'open'});
+
+                const span = document.createElement('span');
+                span.textContent = `Hallo ${this.getAttribute("name")}!`;
+
+                const slot = document.createElement('slot');
+                slot.setAttribute("name", "myslot");
+
+                const div = document.createElement('div');
+                div.append(span, slot);
+
+                const style = document.createElement("style");
+                style.textContent = `
+                    div {
+                        background-color: gold;
+                        padding: 2ex;
+                    }`;
+                this.shadowRoot.append(style, div);
+            }
+        }
+
+        customElements.define("my-hello", MyHelloElement)
+    </script>
+</body>
+</html>

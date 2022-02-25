@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Samples</title>
+</head>
+<body>
+<h1>Async JavaScript (Promises)</h1>
+<script>
+    const resolved = Promise.resolve(42);
+    resolved.then(value => console.log("then value: ", value));
+
+    const delayed = new Promise(resolve => {
+        setTimeout(() => {
+            console.log("timeout reached...")
+            resolve(47);
+        }, 3000);
+    });
+    delayed.then(value => console.log("then value: ", value));
+
+    const rejected = new Promise((resolve, reject) => {
+      reject(new Error("Simulated Failure"));
+    });
+    rejected.then(value => console.log("then value: ", value))
+    .catch(reason => {
+        console.log("rejected, because: ", reason);
+    })
+
+    async function process(promise) {
+        const result = await promise;
+        console.log("processing: ", result);
+        return result * 2;
+    }
+
+    process(resolved).then(result => console.log("then result: ", result));
+    process(delayed).then(result => console.log("then result: ", result));
+</script>
+</body>
+</html>
