@@ -8,14 +8,13 @@
 :imagesdir: images
 :date: {revealjs_date}
 
+include::workshop.adoc[]
+
 include::goldschmiede-lit-fusion.adoc[]
-
-include::oneMoreChapter.adoc[]
-
 
 
 // Samlpes
 
-include::samples-anderscore.adoc[]
+// include::samples-anderscore.adoc[]
 
-include::samples-revealjs.adoc[]
+// include::samples-revealjs.adoc[]

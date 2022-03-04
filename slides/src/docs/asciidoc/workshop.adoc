@@ -1,0 +1,99 @@
+== Agenda
+
+. Einsteig in Lit
+. Konzepte hinter Lit (HTML+JavaScript)
+. Entwicklen mit Lit (NPM-Projekt aufsetzen)
+. Verwendung von (Vaadin-) Web-Components
+. Entwicklen mit Hilla (Spring-Boot Projekt aufsetzen)
+. Anbindung eines Java-Backends (Endpoints)
+. Verwendung von Stores (mobx)
+
+== Einsteig in Lit
+
+* https://lit.dev/ => Tutorial
+
+== Konzepte hinter Lit (HTML+JavaScript)
+
+. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates[Tagged Templates (Template literals)]
+. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements[Custom Elements]
+. https://eloquentjavascript.net/11_async.html[Asynchronous JavaScript]
+. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots[Slots]
+
+== Entwicklen mit Lit (NPM-Projekt aufsetzen)
+
+* https://lit.dev/ => Get Started => Starter Kits
+* https://github.com/lit/lit-element-starter-ts
+
+Bauen mit:
+
+    npm i
+    npm run build
+
+Ausführen mit (beide gleichzeitig)
+
+    npm run serve
+    npm run build:watch
+
+== Verwendung von (Vaadin-) Web-Components
+
+[.heading]
+== Web-Component verwenden
+
+-> https://www.webcomponents.org/introduction
+
+    npm install --save @polymer/paper-button
+
+[.heading]
+Vaadin Komponente verwenden
+
+-> https://vaadin.com/docs/latest/ds/components/date-picker
+
+Vaadin data-picker installieren:
+
+    npm i @vaadin/vaadin-date-picker --save
+
+Formatierung von Datumswerten:
+
+    npm install date-fns --save
+
+== Entwicklen mit Hilla (Spring-Boot Projekt aufsetzen)
+
+* Übersicht: https://hilla.dev/docs/tutorials/in-depth-course/#what-is-hilla[What is Hilla]
+* Vergleich: https://vaadin.com/comparison?compare=hilla_vs_angular
+* Start: https://start.vaadin.com
+** Settings -> UI: Hilla
+
+Bauen und starten mit:
+
+    mvn clean install
+    mvn spring-boot:run
+
+== Frontend erstellen
+
+* CSS-Klassen: https://vaadin.com/docs/latest/ds/foundation/utility-classes
+
+
+== Anbindung eines Java-Backends (Endpoints)
+
+* Evtl. Dependencies ergänzen: https://start.spring.io/
+
+.Annotationen:
+* *@Endpoint*
+* *@Nonnull*
+* *@AnonymousAllowed*
+
+== Model-Binding (Binder)
+
+* TypeScript-Klasse: Binder
+* field-Methode für Binding
+
+== Verwendung von Stores (mobx)
+== Wie geht's weiter
+
+=>  https://hilla.dev/docs/tutorials/in-depth-course +
+... ist ein ausführliches Tutorial mit:
+
+* Routing
+* Securtiy
+* PWA
+* Cloud-Deployment

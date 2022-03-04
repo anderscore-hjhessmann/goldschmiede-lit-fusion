@@ -3,6 +3,7 @@ package com.anderscore.samples.tasks.entity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,6 +22,7 @@ public class TaskEntity {
     @GeneratedValue
     private Long id;
 
+    @Length(min = 5, max = 128)
     private String name;
 
     private LocalDate due;
