@@ -48,6 +48,11 @@ Formatierung von Datumswerten:
 * Vergleich: https://vaadin.com/comparison?compare=fusion_vs_vue
 * Start: https://start.vaadin.com/app
 
+== Abhängigkeiten ergänzen:
+
+* https://start.spring.io/
+
 == Hilla Referenzen
 
 * CSS-Klassen: https://vaadin.com/docs/latest/ds/foundation/utility-classes
+
