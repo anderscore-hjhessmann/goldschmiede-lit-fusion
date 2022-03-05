@@ -5,12 +5,14 @@ import com.anderscore.samples.tasks.entity.TaskEntity;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
 import dev.hilla.Nonnull;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 @Endpoint
 @AnonymousAllowed
+@Slf4j
 public class TaskEndpoint {
 
     @Autowired
@@ -22,6 +24,12 @@ public class TaskEndpoint {
     }
 
     public TaskEntity save(TaskEntity task) {
+        log.info("saving {}", task);
         return repository.save(task);
+    }
+
+    public void remove(TaskEntity task) {
+        log.info("removing {}", task);
+        repository.delete(task);
     }
 }
